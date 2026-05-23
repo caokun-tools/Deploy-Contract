@@ -5,6 +5,7 @@ import '../providers/network_provider.dart';
 import 'wallet/wallet_screen.dart';
 import 'contract/contract_screen.dart';
 import 'deploy/deploy_screen.dart';
+import 'generator/contract_generator_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,12 +21,14 @@ class _HomeScreenState extends State<HomeScreen> {
     _NavItem(icon: Icons.account_balance_wallet_rounded, label: '钱包'),
     _NavItem(icon: Icons.code_rounded, label: '合约'),
     _NavItem(icon: Icons.rocket_launch_rounded, label: '部署'),
+    _NavItem(icon: Icons.auto_awesome_rounded, label: '生成器'),
   ];
 
   final List<Widget> _screens = const [
     WalletScreen(),
     ContractScreen(),
     DeployScreen(),
+    ContractGeneratorScreen(),
   ];
 
   @override
